@@ -28,9 +28,12 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-toggleRef.addEventListener('change', checkedOnToggleTheme);
+let isChecked = JSON.parse(localStorage.getItem('CHECKED'));
 
-function checkedOnToggleTheme(evt) {
+toggleRef.addEventListener('change', checkedOnToggleTheme);
+toggleRef.addEventListener('change', themeSetLocalStorage);
+
+function checkedOnToggleTheme() {
   if (toggleRef.checked) {
     bodyRef.classList.remove(Theme.LIGHT);
     bodyRef.classList.add(Theme.DARK);
@@ -39,3 +42,23 @@ function checkedOnToggleTheme(evt) {
     bodyRef.classList.add(Theme.LIGHT);
   }
 }
+
+function themeSetLocalStorage() {
+  isChecked = JSON.parse(localStorage.getItem('CHECKED'));
+  bodyRef.setAttribute('class', isChecked ? Theme.LIGHT : Theme.DARK);
+
+  localStorage.setItem('CHECKED', !isChecked);
+}
+
+//     if (toggleRef.checked) {
+//     bodyRef.localStorage.setItem('onDarkTheme', Theme.DARK);
+//     toggleRef.setAttribute('checked', true);
+//   } else {
+//     bodyRef.localStorage.removeItem('onDarkTheme', Theme.DARK);
+//     bodyRef.localStorage.setItem('onLigthTheme', Theme.LIGHT);
+//   }
+
+// if (localStorage.getItem('onTheme') === Theme.DARK) {
+//   bodyRef.localStorage.setItem('onDarkTheme', Theme.DARK);
+//   bodyRef.localStorage.removeItem('onLigthTheme', Theme.LIGHT);
+// }
