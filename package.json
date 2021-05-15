@@ -1,0 +1,25 @@
+{
+  "name": "goit-js-hw-10-food-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlhaBaturina/goit-js-hw-10-food-service.git"
+  },
+  "author": "Olga Baturina <olga.panda803@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlhaBaturina/goit-js-hw-10-food-service/issues"
+  },
+  "homepage": "https://github.com/OlhaBaturina/goit-js-hw-10-food-service#readme",
+  "keywords": [],
+  "dependencies": {
+    "handlebars": "^4.7.7"
+  }
+}
