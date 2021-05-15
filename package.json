@@ -1,25 +1,28 @@
 {
   "name": "goit-js-hw-10-food-service",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://OlhaBaturina.github.com/goit-js-hw-10-food-service",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-10-food-service/",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-10-food-service/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OlhaBaturina/goit-js-hw-10-food-service.git"
   },
-  "author": "Olga Baturina <olga.panda803@gmail.com>",
+  "keywords": [],
+  "author": "Olha Baturina <olga.batuirna.golovastova@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/OlhaBaturina/goit-js-hw-10-food-service/issues"
+    "url": "https://github.com/OlhaBaturina/goit-js-hw-10-food-service"
   },
-  "homepage": "https://github.com/OlhaBaturina/goit-js-hw-10-food-service#readme",
-  "keywords": [],
-  "dependencies": {
-    "handlebars": "^4.7.7"
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "posthtml-include": "^1.6.2",
+    "sass": "^1.32.8"
   }
 }
