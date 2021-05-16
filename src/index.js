@@ -30,6 +30,10 @@ const Theme = {
 
 let isChecked = JSON.parse(localStorage.getItem('CHECKED'));
 
+// const cheking = isChecked => {
+//   isChecked ? (toggleRef.checked = true) : (toggleRef.checked = false);
+// };
+
 toggleRef.addEventListener('change', checkedOnToggleTheme);
 toggleRef.addEventListener('change', themeSetLocalStorage);
 
