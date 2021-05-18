@@ -27,21 +27,17 @@ function checkedOnToggleTheme() {
   if (toggleRef.checked) {
     bodyRef.classList.remove(Theme.LIGHT);
     bodyRef.classList.add(Theme.DARK);
+    localStorage.setItem('THEME', 'dark-theme');
   } else {
     bodyRef.classList.remove(Theme.DARK);
     bodyRef.classList.add(Theme.LIGHT);
+    localStorage.setItem('THEME', 'light-theme');
   }
-
-  // сохраняем данные в localStorage
-  localStorage.setItem('THEME', bodyRef.classList.value);
 }
 
 // Возвращаем данные чекбокса из localStorage
 function defaultTheme() {
-  bodyRef.setAttribute(
-    'class',
-    localStorage.getItem('THEME') === null ? Theme.LIGHT : localStorage.getItem('THEME'),
-  );
+  bodyRef.setAttribute('class', localStorage.getItem('THEME') || Theme.LIGHT);
 
   // Устанавливаем положение переключателя
   if (localStorage.getItem('THEME') === Theme.DARK) {
